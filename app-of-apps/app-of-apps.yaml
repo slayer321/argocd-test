@@ -21,7 +21,7 @@ spec:
     directory:
       recurse: true
     path: /app-of-apps/
-    repoURL: git@github.com:slayer321/argocd-test.git
+    repoURL: https://github.com/slayer321/argocd-test.git
     targetRevision: main
   syncPolicy:
     automated:

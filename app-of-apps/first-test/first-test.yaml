@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: git@github.com:slayer321/argocd-test.git
+    repoURL: https://github.com/slayer321/argocd-test.git
     targetRevision: main
     path: /first-test-app
   destination:
