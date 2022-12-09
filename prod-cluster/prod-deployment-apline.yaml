@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: prod-deployment-nginx
+  name: prod-deployment-nginx
+  namespace: prod-cluster
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prod-deployment-nginx
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prod-deployment-nginx
+    spec:
+      containers:
+      - image: alpine
+        name: alpine
+        resources: {}
+status: {}
