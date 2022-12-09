@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: "2022-12-09T09:49:44Z"
+  generation: 1
+  labels:
+    app: prod-deployment-nginx
+  name: prod-deployment-nginx
+  namespace: prod-cluster
+  resourceVersion: "14882"
+  uid: 72ca49c6-0912-4a70-bfc3-524960211b7e
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: prod-deployment-nginx
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: prod-deployment-nginx
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: Always
+        name: nginx
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}

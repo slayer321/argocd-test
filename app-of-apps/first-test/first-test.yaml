@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: first-test-app
+  namespace: first-test-app
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:slayer321/argocd-test.git
+    targetRevision: main
+    path: /first-test-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: first-test-app
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - CreateNamespace=true

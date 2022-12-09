@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod-cluster
+  namespace: prod-cluster
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:slayer321/argocd-test.git
+    targetRevision: main
+    path: /prod-cluster
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: prod-cluster
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - CreateNamespace=true

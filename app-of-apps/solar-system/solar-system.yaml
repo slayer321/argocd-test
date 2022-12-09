@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: solar-system-app
+  namespace: solar-system
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:slayer321/argocd-test.git
+    targetRevision: main
+    path: /solar-system
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: solar-system
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - ApplyOutOfSyncOnly=true
+    - CreateNamespace=true
