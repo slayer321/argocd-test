@@ -6,10 +6,10 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
   name: app-of-apps
-  namespace: argocd
+  namespace: argocd-test
 spec:
   destination:
-    namespace: argocd
+    namespace: argocd-test
     server: https://kubernetes.default.svc
   # ignoreDifferences:
   # - group: argoproj.io
