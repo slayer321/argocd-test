@@ -19,7 +19,7 @@ spec:
         app: prod-deployment-nginx
     spec:
       containers:
-      - image: alpine
+      - image: nginx
         name: alpine
         resources: {}
 status: {}
