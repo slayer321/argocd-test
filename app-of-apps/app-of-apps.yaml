@@ -20,7 +20,7 @@ spec:
   source:
     directory:
       recurse: true
-    path: /app-of-apps/
+    path: app-of-apps/
     repoURL: https://github.com/slayer321/argocd-test.git
     targetRevision: main
   syncPolicy:
