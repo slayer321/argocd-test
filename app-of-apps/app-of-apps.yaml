@@ -25,5 +25,5 @@ spec:
     automated:
       prune: true
     syncOptions:
-    - ApplyOutOfSyncOnly=true
+    #- ApplyOutOfSyncOnly=true
     - CreateNamespace=true
