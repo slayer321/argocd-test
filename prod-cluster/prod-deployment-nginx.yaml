@@ -7,8 +7,6 @@ metadata:
     app: prod-deployment-nginx
   name: prod-deployment-nginx
   namespace: prod-cluster
-  resourceVersion: "14882"
-  uid: 72ca49c6-0912-4a70-bfc3-524960211b7e
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
