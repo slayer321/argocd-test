@@ -1,7 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: null
   labels:
     app: first-test-app-nginx
   name: first-test-app-nginx
@@ -11,15 +10,13 @@ spec:
   selector:
     matchLabels:
       app: first-test-app-nginx
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: first-test-app-nginx
     spec:
       containers:
-      - image: nginx:1.17
+      - image: nginx
         name: nginx
         resources: {}
 status: {}
