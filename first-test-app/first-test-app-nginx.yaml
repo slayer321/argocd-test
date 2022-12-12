@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: first-test-app-alpine
-  name: first-test-app-alpine
+    app: first-test-app-nginx
+  name: first-test-app-nginx
   namespace: first-test-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: first-test-app-alpine
+      app: first-test-app-nginx
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: first-test-app-alpine
+        app: first-test-app-nginx
     spec:
       containers:
-      - image: alpine
-        name: alpine
+      - image: nginx
+        name: nginx
         resources: {}
 status: {}
