@@ -16,7 +16,7 @@ spec:
         app: first-test-app-nginx
     spec:
       containers:
-      - image: nginx
+      - image: nginx:1.19
         name: nginx
         resources: {}
 status: {}
